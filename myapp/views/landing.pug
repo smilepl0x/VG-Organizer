@@ -9,3 +9,7 @@ block content
     input(name="description", type="text", placeholder="Enter short description")
     input(name="time_played", type="number", value="0", placeholder="Enter time played in minutes")
     button(type="submit") Submit
+  if games
+    h1 Games
+    for game in games
+      p #{game.title}
