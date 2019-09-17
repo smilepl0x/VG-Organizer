@@ -5,7 +5,6 @@ module.exports = {
     "database": "express-mvp-db",
     "host": "127.0.0.1",
     "dialect": "postgres",
-    "operatorsAliases": false,
     "port": 5432
   },
   "test": {

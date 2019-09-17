@@ -4,5 +4,8 @@ block content
   h1= title
   p Welcome to #{title}
   form(action="/", method="POST")
-    input(name="lead_email", type="email", placeholder="Enter you email address")
+    input(name="game_title", type="text", placeholder="Title of Game")
+    input(name="img_url", type="text", placeholder="URL of Cover Art")
+    input(name="description", type="text", placeholder="Enter short description")
+    input(name="time_played", type="number", value="0", placeholder="Enter time played in minutes")
     button(type="submit") Submit

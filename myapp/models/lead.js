@@ -2,7 +2,7 @@
 
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  var Lead = sequelize.define('Lead', {
+  var Lead = sequelize.define('Game', {
     id: {
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
@@ -16,15 +16,16 @@ module.exports = (sequelize, DataTypes) => {
     },
     imgURL: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     description: {
       type: DataTypes.TEXT,
-      allowNull: false,
+      allowNull: true,
     },
     timePlayed: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      defaultValue: 0,
+      allowNull: true,
     },
   });
 
