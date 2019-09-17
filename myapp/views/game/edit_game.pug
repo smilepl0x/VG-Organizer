@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+  form(action="/game/" + game.id + "/edit", method="POST")
+    input(name="game_title", type="text", placeholder="Title of Game", value=game.title)
+    input(name="img_url", type="text", placeholder="URL of Cover Art", value=game.imgURL)
+    input(name="description", type="text", placeholder="Enter short description", value=game.description)
+    input(name="time_played", type="number", placeholder="Enter time played in minutes" value=game.timePlayed)
+    button(type="submit") Save

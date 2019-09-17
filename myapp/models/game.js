@@ -24,7 +24,6 @@ module.exports = (sequelize, DataTypes) => {
     },
     timePlayed: {
       type: DataTypes.INTEGER,
-      defaultValue: 0,
       allowNull: true,
     },
   });

@@ -30,3 +30,25 @@ exports.show_game = function(req, res, next) {
     res.render('game', { game : game});
   })
 }
+
+exports.show_edit_game = function(req, res, next) {
+  return models.Game.findOne({
+    where: {
+      id: req.params.game_id
+    }
+  }).then(game => {
+    res.render('game/edit_game', { game : game});
+  })
+}
+
+exports.edit_game = function(req, res, next) {
+  return models.Game.update({
+    title: req.body.game_title
+  }, {
+    where: {
+      id: req.params.game_id
+    }
+  }).then(result => {
+    res.redirect('/game/' + req.params.game_id);
+  })
+}

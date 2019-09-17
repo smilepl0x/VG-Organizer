@@ -2,4 +2,13 @@ extends layout
 
 block content
   h1 Game
-  p #{game.title}
+  p
+    span #{game.title}
+    |
+    a(href="/game/" + game.id + "/edit") Edit
+  p
+    span Image #{game.imgURL}
+  p
+    span Description #{game.description}
+  p
+    span Time Played #{game.timePlayed}
