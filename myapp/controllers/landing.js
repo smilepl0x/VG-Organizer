@@ -52,3 +52,13 @@ exports.edit_game = function(req, res, next) {
     res.redirect('/game/' + req.params.game_id);
   })
 }
+
+exports.delete_game = function(req, res, next) {
+  return models.Game.destroy({
+    where: {
+      id: req.params.game_id
+    }
+  }).then(result => {
+    res.redirect('/games');
+  })
+}

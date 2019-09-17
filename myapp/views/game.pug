@@ -4,7 +4,7 @@ block content
   h1 Game
   p
     span #{game.title}
-    |
+    | 
     a(href="/game/" + game.id + "/edit") Edit
   p
     span Image #{game.imgURL}
@@ -12,3 +12,5 @@ block content
     span Description #{game.description}
   p
     span Time Played #{game.timePlayed}
+  form(action="/game/" + game.id + "/delete", method="POST")
+    button(type="submit") Delete

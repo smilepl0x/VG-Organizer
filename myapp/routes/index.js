@@ -9,4 +9,5 @@ router.get('/games', landing.show_games);
 router.get('/game/:game_id', landing.show_game);
 router.get('/game/:game_id/edit', landing.show_edit_game);
 router.post('/game/:game_id/edit', landing.edit_game);
+router.post('/game/:game_id/delete', landing.delete_game);
 module.exports = router;
