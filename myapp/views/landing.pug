@@ -12,4 +12,7 @@ block content
   if games
     h1 Games
     for game in games
-      p #{game.title}
+      p
+        span #{game.title}
+        | 
+        a(href="/game/" + game.id) Details

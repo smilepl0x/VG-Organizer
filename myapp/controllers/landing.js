@@ -20,3 +20,13 @@ exports.show_games = function(req, res, next) {
     res.render('landing', { title: 'Express', games: games });
   })
 }
+
+exports.show_game = function(req, res, next) {
+  return models.Game.findOne({
+    where: {
+      id: req.params.game_id
+    }
+  }).then(game => {
+    res.render('game', { game : game});
+  })
+}
