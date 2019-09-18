@@ -1,8 +1,23 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #C7C7C7;
+  background-color: #313131;
 }
 
 a {
   color: #00B7FF;
+}
+
+table {
+  background-color: #484655;
+  width: 100%;
+}
+
+td {
+  text-align: center;
+}
+
+#game_rows:nth-child(even) {
+  background-color: #6a677e;
 }

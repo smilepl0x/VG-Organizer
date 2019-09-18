@@ -4,15 +4,32 @@ block content
   h1= title
   p Welcome to #{title}
   form(action="/", method="POST")
-    input(name="game_title", type="text", placeholder="Title of Game")
-    input(name="img_url", type="text", placeholder="URL of Cover Art")
-    input(name="description", type="text", placeholder="Enter short description")
-    input(name="time_played", type="number", value="0", placeholder="Enter time played in minutes")
-    button(type="submit") Submit
+    table
+      tr
+        th Game Title
+        th Cover Art URL
+        th Description
+        th Minutes Played
+      tr
+        td
+          input(name="game_title", type="text", placeholder="")
+        td
+          input(name="img_url", type="text", placeholder="")
+        td
+          input(name="description", type="text", placeholder="")
+        td
+          input(name="time_played", type="number", value="0", placeholder="Enter time played in minutes")
+      tr
+        td(colspan="4" align="center")
+          button(type="submit") Submit
   if games
     h1 Games
-    for game in games
-      p
-        span #{game.title}
-        | 
-        a(href="/game/" + game.id) Details
+    table
+      for game in games
+        tr(id="game_rows")
+          td
+            span #{game.title}
+            |
+            a(href="/game/" + game.id) Details
+  else
+    p Enter a game to get started!

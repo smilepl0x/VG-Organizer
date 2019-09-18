@@ -1,7 +1,7 @@
 const models = require('../models')
 
 exports.get_landing = function(req, res, next) {
-  res.render('landing', { title: 'Express' });
+  res.render('landing', { title: 'Video Game Organizer' });
 }
 
 exports.submit_game = function(req, res, next) {
@@ -17,7 +17,7 @@ exports.submit_game = function(req, res, next) {
 
 exports.show_games = function(req, res, next) {
   models.Game.findAll().then(games => {
-    res.render('landing', { title: 'Express', games: games });
+    res.render('landing', { title: 'Video Game Organizer', games: games });
   })
 }
 
